@@ -1,75 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, inital=scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="which=device-width, initial-scale=1.0">
+    <title>202101673 윤현석</title>
     <style>
-        div{
-            display: inline-block;
-            width: 150px;
-            height: 60px;
-            border: 1px solid #715;
-            background-color: rgb(74, 71, 231);
+        header {
+            height: 25%;
+            background-color: rgb(255, 185, 182);
         }
-        #n3:hover{opacity: 0.7;}
-        .sub{
-            background-color: blanchedalmond;
-            position: relative;
-            top:10px;
-            left: 30px;
+        nav {
+            font-size: 15pt;
+            background-color: antiquewhite;
         }
-        #fix{
-            position: fixed;
-            bottom: 50px;
-            right: 100px;
-        }
-        #float{
-            position: fixed;
-            left: 300px;
-            width: 400px;
-
-        }
-    ul{
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        font-size: 20px;
-        background-color: beige;
-    }
-    li{
-        display:inline-block;
-        margin-left: 20px;
-        }
-        table{
-        border-collapse: collapse;
-        background-color: rgb(236, 221, 202);
-        }
-        td{
-        border:1px solid rgb(24, 24, 44);
-        width: 100px;
-        height: 30px;
-        text-align: center;}
     </style>
 </head>
 <body>
-    <div>DIV1</div>
-    <div class="sub">DIV2</div>
-    <div id="n3">DIV3</div>
-    <div class="sub">DIV4</div>
-    <div>DIV5</div>
-    <div id="fix">DIV6</div>
-    <div id="float">DIV7
-        <img src="image/꿈돌이.jfif" width="200px" style="float:left">
-    </div>
-
-    <ul>
-        <li style="list-style: square;">프랑스</li>
-        <li style="list-style: circle;">이탈리아</li>
-        <li style="list-style:disc;">체코</li>
-    </ul>
-    <table>
-        <tr><td>월</td><td>화</td><td>수</td></tr>
-        <tr><td>1</td><td>2</td><td>3</td></tr>
-    </table>
-        
+    <header>
+        <h1>스포츠 Insight</h1>
+        <h2 style="text-align: right;">202101673 윤현석</h2>
+    </header>
+    <section style = "background-color: antiquewhite">
+        <h2>오늘의 경기, 오늘의 순간!</h2>
+    </section>
+    <nav>
+        <ul>
+            <li>
+                <a href="todaygame">오늘의 경기</a>
+            </li>
+            <li>
+                <a href="todaycapture">오늘의 순간</a>
+            </li>
+            <li>
+                <a href="match">다가오는 경기</a>
+            </li>
+        </ul>
+    </nav>
+    <section id = "todaygame" style="background-color: rgb(197, 92, 92);">
+        <h2> 오늘의 명경기 </h2>
+        <h5 style="text-align: right;"> 2024. 11. 03. 기준</h5>
+            <ul>
+                <li>
+                    <h3>League of Legend</h3>
+                    <img src="https://www.koreaes.com/news/photo/202411/364857_15626_15.jpg" style="height: 300pt; width: 450pt;" alt="BLG vs T1"><br>
+                    <a href="https://game.naver.com/esports/League_of_Legends/schedule/world_championship?date=2024-11"><h4>League of Legend World Championship Final [BLG vs T1 (O2 아레나)] 경기 결과 </h4></a>
+                    <h3>Premier League</h3>
+                    <img src="https://sportcdns.live/news-2/27637f628ed3a36e03427959735b34ac2614dd36affdb1c6c8bc4ba3837713cf.png" style="height: 300pt; width: 450pt;" alt="뉴캐슬 vs 아스날"><br>
+                    <a href="https://m.sports.naver.com/game/2024110210050850157/record"><h4>Premier League [뉴캐슬 vs 아스날 (세인트 제임스 파크)] 경기 결과</h4></a>
+                </li>
+            </ul>
+    </section>
+    <section id = "todaycapture" style="background-color: rgb(155, 255, 255);">
+        <h2>오늘의 순간</h2>
+        <ul>
+            <li>
+                <h3>T1, 우승의 순간</h3>
+                <img src="https://cdn.ipnn.co.kr/news/photo/202411/410789_62850_4220.jpg" style="height: 300pt; width: 450pt;" alt = "T1우승">
+                <a href="https://www.youtube.com/watch?v=nTGLkSVcyqg"><h4> T1의 우승의 순간, 그 전율을 함께 느껴보세요!</h4></a>
+                <h4></h4>
+            </li>
+        </ul>
+    </section>
+    <section id = "match" style="background-color: antiquewhite;">
+        <h2> 다가오는 경기 3선 </h2>
+            <ul>
+                <li>
+                    <h3>NPB</h3>
+                    <a href="https://m.sports.naver.com/game/20241103SFYK0/cheer"><h4>NPB[요코하마 vs 소프트뱅크 (요코하마 스타디움)] 11월 3일 KST 18:30</h4></a>
+                </li>
+                <li>
+                    <h3>Premier League</h3>
+                    <a href="https://m.sports.naver.com/game/2024110310050850163/record"><h4>Premier League[토트넘 vs 아스톤빌라 (토트넘 홋퍼스 스타디움)] 11월 3일 KST 23:00</h4></a>
+                </li>
+                <li>
+                    <h3>Premier League</h3>
+                    <a href="https://m.sports.naver.com/game/2024110410050850155/record"><h4>Premier League[맨유 vs 챌시 (올드 트레포드)] 11월 4일 KST 01:30</h4></a>
+                </li>
+            </ul>
+    </section>
 </body>
 </html>
