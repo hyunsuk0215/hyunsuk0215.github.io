@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>클릭으로 함수 호출하기</title>
+    <link rel="stylesheet" href="style_js.css">
+</head>
+<body>
+    <h1 id = "alter" onclick="changeColor()">Change Colors</h1><hr>
+
+    <button onclick="showAlert()">Click Me</button>
+    <button onclick="image(1)">first</button>
+    <button onclick="image(2)">second</section></button>
+    <button onclick="image(3)">third</button>
+
+    <h1>Change Colors</h1><hr>
+    <button onclick="change(red)">red</button>
+    <button onclick="change(blue)">blue</button>
+    <button onclick="change(yellow)">yellow</button>
+    <button onclick="change(green)">green</button>
+
+    <ul>
+        <li>Item 1</li>
+        <li onclick="changeListItem(this)">Item 2</li>
+        <li onclick="changeListItem(this)">Item 3</li>
+    </ul>
+    <script>
+        function changeColor() {
+            const alert = document.getElementById("alter");
+            alter.style.background = "aqua";
+            alter.style.color = "whilte";
+        }
+        function changeListItem(item) {
+            item.style.background = "lightcoral";
+            item.style.color = "whilte";
+        }
+        function showAlter() {
+            alter("안녕하세요!")
+        }
+        function change(colors) {
+            const alter = document.getElementById('alter');
+            alter.style.color = colors;
+        }
+        function image(number) {
+            const img = document.createElement("<img src = 'image/music" + number + ".png'>'");
+            container.appendChild(img);
+        }
+    </script>
+</body>
+</html>

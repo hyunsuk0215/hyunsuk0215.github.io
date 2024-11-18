@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>사용자 정의 함수 만들고 호출하기</title>
+    <link rel="stylesheet" href="style_js.css">
+</head>
+<body>
+    <script>
+        function add(num1, num2) {      // 함수 정의
+        return num1 + num2;
+        }
+        function mix(num1, num2) {
+        return num1 * num2;
+        }
+        let a = 3, b = 4;
+        const result1 = add(a, b);
+        document.write(a + " + " + b + " = " + result1 + "<br>");
+
+        const result2 = mix(a, b);
+        document.write(a + " X " + b + " = " + result2);        // 함수 호출
+    </script>
+</body>
+</html>
