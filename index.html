@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="which=device-width, initial-scale=1.0">
     <title>202101673 윤현석</title>
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
         header {
-            height: 25%;
             background-color: rgb(255, 185, 182);
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            margin: 0;
+            padding: 10px 20px;
+        }
+        h2 {
+            margin: 0;
+            padding: 10px 20px;
         }
         nav {
             font-size: 15pt;
@@ -15,115 +29,81 @@
         }
     </style>
 </head>
+
 <body>
     <header>
-        <h1>스포츠 Insight</h1>
+        <h1 style="margin-left: 220px; padding: 20px;">스포츠 Insight <audio src = "media\League of Legends 리그오브레전드 월드 챔피언십 주제곡 모음.mp3" controls loop></audio></h1>
         <h2 style="text-align: right;">202101673 윤현석</h2>
     </header>
-    <section style="background-color: antiquewhite">
+    <section style="margin-left: 220px; padding: 20px; background-color: antiquewhite;">
         <h2>오늘의 경기, 오늘의 순간!</h2>
     </section>
-    <nav>
-        <ul>
-            <li>
-                <a href="todaygame">오늘의 경기</a>
+    <nav style="position: fixed; top: 0; left: 0; width: 200px; background-color: rgb(252, 249, 77); height: 100%; padding: 10px;">
+        <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 10px;">
+                <a href="#todaygame" style="text-decoration: none; font-size: 15pt;">오늘의 경기</a>
+            </li>
+            <li style="margin-bottom: 10px;">
+                <a href="#todaycapture" style="text-decoration: none; font-size: 15pt;">오늘의 순간</a>
             </li>
             <li>
-                <a href="todaycapture">오늘의 순간</a>
-            </li>
-            <li>
-                <a href="match">다가오는 경기</a>
+                <a href="#match" style="text-decoration: none; font-size: 15pt;">다가오는 경기</a>
             </li>
         </ul>
     </nav>
-    <section id="todaygame" style="background-color: rgb(197, 92, 92);">
+    </nav>
+    <section id="todaygame" style="margin-left: 220px; padding: 20px; background-color: rgb(197, 92, 92);">
         <h2> 오늘의 명경기 </h2>
-        <h5 style="text-align: right;"> 2024. 11. 03. 기준</h5>
+        <h5 style="text-align: left;"> 2024. 11. 03. 기준</h5>
         <ul>
             <li>
                 <h3>League of Legend</h3>
-                <img src="https://www.koreaes.com/news/photo/202411/364857_15626_15.jpg" style="height: 300pt; width: 450pt;" alt="BLG vs T1"><br>
-                <a href="https://game.naver.com/esports/League_of_Legends/schedule/world_championship?date=2024-11"><h4>League of Legend World Championship Final [BLG vs T1 (O2 아레나)] 경기 결과 </h4></a>
+                <img src="https://www.koreaes.com/news/photo/202411/364857_15626_15.jpg"
+                    style="height: 300pt; width: 450pt;" alt="BLG vs T1"><br>
+                <a href="https://game.naver.com/esports/League_of_Legends/schedule/world_championship?date=2024-11">
+                    <h4>League of Legend World Championship Final [BLG vs T1 (영국 O2 아레나)] 경기 결과 </h4>
+                </a>
             </li>
         </ul>
-
-        <div>
-            <h3>선수 점수 입력</h3>
-            <label for="team">팀 선택:</label>
-            <select id="team">
-                <option value="T1">T1</option>
-                <option value="BLG">BLG</option>
-            </select>
-            <label for="score">점수 입력:</label>
-            <input type="number" id="score" min="0" max="10" />
-            <button onclick="addScore()">점수 추가</button>
-        </div>
-        <div id="averageScores">
-            <h3>평균 선수 점수</h3>
-            <p><strong>T1</strong>: <span id="T1-average">계산 중...</span></p>
-            <p><strong>BLG</strong>: <span id="BLG-average">계산 중...</span></p>
-        </div>
+        <iframe src="playerscore.html" name="playerscore" width="500" height="400" style="position: fixed; right: 10px; top: 200px; z-index: 1000; border: 1px solid black;"></iframe>
     </section>
-    
-    <script>
-        const playerScores = {
-            T1: [],
-            BLG: []
-        };
-        function calculateAverage(scores) {
-            if (scores.length === 0) return "N/A";
-            const total = scores.reduce((sum, score) => sum + score, 0);
-            return (total / scores.length).toFixed(2);
-        }
-
-        function addScore() {
-            const team = document.getElementById("team").value;
-            const scoreInput = document.getElementById("score");
-            const score = parseFloat(scoreInput.value);
-
-            if (isNaN(score) || score < 0 || score > 10) {
-                alert("0에서 10 사이의 점수를 입력해주세요.");
-                return;
-            }
-
-            playerScores[team].push(score);
-            scoreInput.value = ""; 
-            updateAverages(); 
-        }
-        function updateAverages() {
-            document.getElementById("T1-average").textContent = calculateAverage(playerScores.T1);
-            document.getElementById("BLG-average").textContent = calculateAverage(playerScores.BLG);
-        }
-        window.onload = updateAverages;
-    </script>
-
-    <section id = "todaycapture" style="background-color: rgb(155, 255, 255);">
+    <section id="todaycapture" style="margin-left: 220px; padding: 20px; background-color: rgb(155, 255, 255);">
         <h2>오늘의 순간</h2>
         <ul>
             <li>
                 <h3>T1, 우승의 순간</h3>
-                <img src="https://cdn.ipnn.co.kr/news/photo/202411/410789_62850_4220.jpg" style="height: 300pt; width: 450pt;" alt = "T1우승">
-                <a href="https://www.youtube.com/watch?v=nTGLkSVcyqg"><h4> T1의 우승의 순간, 그 전율을 함께 느껴보세요!</h4></a>
+                <img src="https://cdn.ipnn.co.kr/news/photo/202411/410789_62850_4220.jpg"
+                    style="height: 300pt; width: 450pt;" alt="T1우승">
+                <a href="https://www.youtube.com/watch?v=nTGLkSVcyqg">
+                    <h4> T1의 우승의 순간, 그 전율을 함께 느껴보세요!</h4>
+                </a>
                 <h4></h4>
             </li>
         </ul>
     </section>
-    <section id = "match" style="background-color: antiquewhite;">
+    <section id="match" style="margin-left: 220px; padding: 20px; background-color: antiquewhite;">
         <h2> 다가오는 경기 3선 </h2>
-            <ul>
-                <li>
-                    <h3>NPB</h3>
-                    <a href="https://m.sports.naver.com/game/20241103SFYK0/cheer"><h4>NPB[요코하마 vs 소프트뱅크 (요코하마 스타디움)] 11월 3일 KST 18:30</h4></a>
-                </li>
-                <li>
-                    <h3>Premier League</h3>
-                    <a href="https://m.sports.naver.com/game/2024110310050850163/record"><h4>Premier League[토트넘 vs 아스톤빌라 (토트넘 홋퍼스 스타디움)] 11월 3일 KST 23:00</h4></a>
-                </li>
-                <li>
-                    <h3>Premier League</h3>
-                    <a href="https://m.sports.naver.com/game/2024110410050850155/record"><h4>Premier League[맨유 vs 챌시 (올드 트레포드)] 11월 4일 KST 01:30</h4></a>
-                </li>
-            </ul>
+        <ul>
+            <li>
+                <h3>NPB</h3>
+                <a href="https://m.sports.naver.com/game/20241103SFYK0/cheer">
+                    <h4>NPB[요코하마 vs 소프트뱅크 (요코하마 스타디움)] 11월 3일 KST 18:30</h4>
+                </a>
+            </li>
+            <li>
+                <h3>Premier League</h3>
+                <a href="https://m.sports.naver.com/game/2024110310050850163/record">
+                    <h4>Premier League[토트넘 vs 아스톤빌라 (토트넘 홋퍼스 스타디움)] 11월 3일 KST 23:00</h4>
+                </a>
+            </li>
+            <li>
+                <h3>Premier League</h3>
+                <a href="https://m.sports.naver.com/game/2024110410050850155/record">
+                    <h4>Premier League[맨유 vs 챌시 (올드 트레포드)] 11월 4일 KST 01:30</h4>
+                </a>
+            </li>
+        </ul>
     </section>
 </body>
+
 </html>
